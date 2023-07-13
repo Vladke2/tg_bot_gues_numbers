@@ -10,6 +10,12 @@ class RN(StatesGroup):
     number = State()
 
 
+@dp.message_handler(commands=('cancel'), state='*')
+async def cancel_operation(message: types.Message, state: FSMContext):
+    await state.finish()
+    await message.reply('Гру скасована\nЩоб грати знову натисніть /start.')
+
+
 @dp.message_handler(commands=['start'])
 async def send_welcome(message: types.Message):
     await message.reply("Привіт👋!\nВибрери максимальне значення випадкового числа 🎲")
