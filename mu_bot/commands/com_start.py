@@ -2,8 +2,7 @@ import random
 from aiogram import types
 from aiogram.dispatcher.filters.state import State, StatesGroup
 from aiogram.dispatcher import FSMContext
-from mu_bot.botss import dp, bot
-print(bot)
+from botss import dp, bot
 
 
 class RN(StatesGroup):
