@@ -1,6 +1,5 @@
 from aiogram import types
 from mu_bot.botss import dp, bot
-print(bot)
 
 
 @dp.message_handler(commands=['hellp'])
