@@ -18,7 +18,7 @@ async def cancel_operation(message: types.Message, state: FSMContext):
 
 @dp.message_handler(commands=['start'])
 async def send_welcome(message: types.Message):
-    await message.reply("Привіт👋!\nВибрери максимальне значення випадкового числа 🎲")
+    await message.reply(f"Привіт {message.from_user.first_name}👋!\nВибери максимальне значення випадкового числа 🎲")
     await RN.random_number.set()
 
 
