@@ -4,8 +4,6 @@ from botss import dp, bot
 
 @dp.message_handler(commands=['hellp','help'])
 async def hellp_info(message):
-    gif = 'bv0j-help'
-    await bot.send_animation(gif)
     url = 'https://github.com/Vladke2'
     bot_data = await bot.get_me()
     button = types.InlineKeyboardMarkup(
@@ -26,5 +24,5 @@ async def execute_random(callb: types.CallbackQuery):
 
 @dp.callback_query_handler(lambda callb: callb.data == "list_of_commands")
 async def execute_random(callb: types.CallbackQuery):
-    await callb.answer('/start,/clear,/cancel,/hellp,/help')
-    await callb.message.reply('/start\n/clear\n/cancel\n/hellp,/help')
+    await callb.answer('/start,/clear,/cancel,/hellp,/help,start_versa,startversa')
+    await callb.message.reply('/start\n/clear\n/cancel\n/hellp,/help\n/start_versa,/startversa')
